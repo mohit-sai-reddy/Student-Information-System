@@ -8,8 +8,8 @@ let id=0;
 const con = mysql.createConnection({
     host:"localhost",
     user:"root",
-    password:"Mohit123",
-    database:"final3"
+    password:"",
+    database:""
 });
 
 con.connect((error)=> {
