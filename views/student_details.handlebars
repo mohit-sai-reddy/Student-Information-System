@@ -1,0 +1,61 @@
+
+<link rel="stylesheet" href="css/student_details.css" />
+<header>
+  <a href="student_profile" class="button">Profile</a>
+  <a href="/logout" class="button logout-btn">Logout</a>
+</header>
+<div class="container">
+  {{#if cond}}
+    {{cond}}
+  {{/if}}
+  <h1>Welcome, {{name}}</h1>
+  <div class="profile-section">
+    <h2>Your Profile</h2>
+    <p><strong>Name:</strong> {{name}}</p>
+    <p><strong>City:</strong> {{city}}</p>
+    <!-- Add more details as needed -->
+  </div>
+  <div class="course-section">
+    <h2>Enrolled Courses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <!-- Add more headers as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        {{#each courserows}}
+          <tr>
+            <td>{{this.courseid}}</td>
+            <td>{{this.coursename}}</td>
+            <!-- Add more cells as needed -->
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <h2>Available Courses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">Course ID</th>
+          <th>Course Name</th>
+          <th style="width: 15%;">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each availrows}}
+          <tr>
+            <td>{{this.courseid}}</td>
+            <td>{{this.coursename}}</td>
+            <td><a href="/enroll?courseid={{this.courseid}}&studentid={{this.studentid}}" class="button">Enroll</a></td>
+            <!-- Add more cells as needed -->
+          </tr>
+        {{/each}}
+            <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+</div>
+

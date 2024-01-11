@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="css/student_login.css" />
+<div class="head"><h2>Student Login Page</h2></div>
+<div class="login_container">
+  <form action="/student_login" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required />
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+    {{#if cond}}
+      {{cond}}
+    {{/if}}
+    <button type="submit">Login</a></button>
+    <button><a href="student_signup">Signup</a></button>
+  </form>
+</div>

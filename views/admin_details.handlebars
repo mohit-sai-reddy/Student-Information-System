@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="css/admin_details.css" />
+<header>
+  <a href="admin_profile" class="button">Profile</a>
+  <a href="/logout" class="button logout-btn">Logout</a>
+</header>
+<div class="container">
+  {{#if cond}}
+    {{cond}}
+  {{/if}}
+  <h1>Welcome, {{name}}</h1>
+  <div class="profile-section">
+  <!-- Add more details as needed -->
+  </div>
+  <div class="courses-list">
+    <h2>Your Courses</h2>
+    <a href="add_course" class="butt">Add Course</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <!-- Add more headers as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        {{#each courserows}}
+          <tr>
+            <td>{{this.courseid}}</td>
+            <td>{{this.coursename}}</td>
+            <td><input type="date" value={{this.coursestartdate}} disabled/></td>
+            <td><input type="date" value={{this.courseendate}} disabled/></td>
+                <!-- Add more cells as needed -->
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="course-section">
+    <h2>Students Enrolled</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Course ID</th>
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <!-- Add more headers as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        {{#each studrows}}
+          <tr>
+            <td>{{this.courseid}}</td>
+            <td>{{this.studentid}}</td>
+            <td>{{this.username}}</td>
+            <!-- Add more cells as needed -->
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <h2>Requests</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Course ID</th>
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th colspan="2" style="text-align: center; width: 25%">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each requestrows}}
+          <tr>
+            <td>{{this.courseid}}</td>
+            <td>{{this.studentid}}</td>
+            <td>{{this.username}}</td>
+            <td>
+              <a href="/accept?studentid={{this.studentid}}&courseid={{this.courseid}}" id="accept" class="button">Accept</a>
+            </td>
+            <td>
+              <a
+                href="/reject?studentid={{this.studentid}}&courseid={{this.courseid}}"
+                id="end"
+                class="button logout-btn"
+                style="display: block"
+                >Reject</a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

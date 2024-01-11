@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="css/add_course.css"/>
+<header>
+    <a href="admin_details" class="button">Back</a>
+    <a href="logout" class="button logout-btn">Logout</a>
+</header>
+<div class="container">
+    
+    <form action="/add_course" method="POST">
+        <label for="id">Enter Course Name</label>
+        <input type="text" id="coursename" name="coursename">
+        <br>
+        <label for="id">Enter Course Start Date</label>
+        <input type="date" id="startdate" name="startdate">
+        <br>
+        <label for="id">Enter Course End Date</label>
+        <input type="date" id="enddate" name="enddate">
+        {{#if cond}}
+            {{cond}}
+        {{/if}}
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</div>

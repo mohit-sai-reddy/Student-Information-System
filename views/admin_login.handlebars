@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="css/admin_login.css" />
+<br />
+<div class="head"><h2>Admin Login Page</h2></div>
+<div class="login_container">
+  <form action="/admin_login" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required />
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+    {{#if cond}}
+      Check Username or Password
+    {{/if}}
+    <button type="submit"><a href="admin_details">Login</a></button>
+  </form>
+</div>
+

@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bg-img.jpeg) top center;
+    background-size: cover;
+    /* overflow: hidden; */
+    position: relative;
+    font-family: "Arial", sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #DED0B6 !important; /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+h2, h3 {
+    font-family: Copperplate, Papyrus, fantasy; /* Apply the specific font family */
+    color: #163020;
+}
+
+.profile-section,
+.course-section {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Increase the padding to increase the size of the rows */
+    text-align: left;
+    font-size: 14px; /* Adjust the font size */
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+.button, .login-container a {
+    background-color: #007bff; /* Updated to match the background color */
+    color: #163020; /* Adjusted text color */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Trebuchet MS;
+    text-decoration: none;
+}
+
+.button:hover, .login-container a:hover, .butt:hover {
+    background-color: #0056b3; /* Darker version for hover effect */
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #ff4757; /* Fading red color on hover */
+}
+
+.butt {
+    background-color: #007bff; /* Updated to match the background color */
+    color: #163020; /* Adjusted text color */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Trebuchet MS;
+    text-decoration: none;
+    position: absolute;
+    right: 24.1%;
+    top: 21.5%;
+}

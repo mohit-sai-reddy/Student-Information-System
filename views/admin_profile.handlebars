@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="css/profile.css" />
+<div class="container">
+  <div class="profile">
+    <div class="header-bar">
+      <a href="admin_details" class="button back-btn">Back</a>
+      <a href="/logout" class="button logout-btn">Logout</a>
+    </div>
+    <div class="profile-header">
+      <h1>Admin Profile</h1>
+    </div>
+    <div class="detail">
+      <label for="profileImage">Profile Image:</label>
+      <div class="detail-content">
+        <img src="../img/profile_image.jpeg" alt="Profile Image" />
+        <button class="edit-btn" onclick="editDetails('profileImage')">
+          Edit
+        </button>
+      </div>
+    </div>
+    
+      <div class="detail">
+        <label for="AdminId">Admin ID:</label>
+        <div class="detail-content">
+          <input type="text" id="AdminId" value={{id}} disabled />
+         
+        </div>
+      </div>
+      <div class="profile-details">
+      <div class="detail">
+        <label for="AdminName">Name:</label>
+        <div class="detail-content">
+          <input type="text" id="AdminName" value={{name}} disabled />
+          <button class="edit-btn" onclick="editDetails('AdminName')">
+            Edit
+          </button>
+        </div>
+      </div>
+      <div class="detail">
+        <label for="AdminEmail">Email:</label>
+        <div class="detail-content">
+          <input
+            type="email"
+            id="AdminEmail"
+            value={{email}}
+            disabled
+          />
+          <button class="edit-btn" onclick="editDetails('AdminEmail')">
+            Edit
+          </button>
+        </div>
+      </div>
+      <div class="detail">
+        <label for="AdminPhone">Phone Number:</label>
+        <div class="detail-content">
+          <input type="tel" id="AdminPhone" value={{phone}} disabled />
+          <button class="edit-btn" onclick="editDetails('AdminPhone')">
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/script2.js"></script>

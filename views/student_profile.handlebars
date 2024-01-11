@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="css/profile.css" />
+<div class="container">
+  <div class="profile">
+    <div class="header-bar">
+      <a href="student_details" class="button back-btn">Back</a>
+      <a href="/logout" class="button logout-btn">Logout</a>
+    </div>
+    <div class="profile-header">
+      <h1>Student Profile</h1>
+    </div>
+    <div class="detail">
+      <label for="profileImage">Profile Image:</label>
+      <div class="detail-content">
+        <img src="../img/profile_image.jpeg" alt="Profile Image" />
+        <button class="edit-btn" onclick="editDetails('profileImage')">
+          Edit
+        </button>
+      </div>
+        <div class="detail">
+          <label for="studentName">StudentId:</label>
+          <div class="detail-content">
+            <input type="text" id="studentId" value={{id}}  disabled/>
+         </div>
+        </div>
+      <div class="profile-details">
+        <div class="detail">
+          <label for="studentName">Name:</label>
+          <div class="detail-content">
+            <input type="text" id="studentName" value={{name}} data-studentid="{{studentId}}"disabled />
+            <button class="edit-btn" onclick="editDetails('studentName')">
+              Edit
+            </button>
+          </div>
+        </div>
+        <div class="detail">
+          <label for="studentEmail">Email:</label>
+          <div class="detail-content">
+            <input
+              type="email"
+              id="studentEmail"
+              value={{email}} 
+              data-studentid="{{studentId}}"
+              disabled
+            />
+            <button class="edit-btn" onclick="editDetails('studentEmail')">
+              Edit
+            </button>
+          </div>
+        </div>
+        <div class="detail">
+          <label for="studentPhone">Phone Number :</label>
+          <div class="detail-content">
+            <input
+              type="tel"
+              id="studentPhone"
+              value={{phone}}
+              data-studentid="{{studentId}}"
+              disabled
+            />
+            <button class="edit-btn" onclick="editDetails('studentPhone')">
+              Edit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/script.js"></script>
